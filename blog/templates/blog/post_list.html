@@ -6,12 +6,18 @@
         <div>
             <h1><a href="">Awander's Blog</a></h1>
         </div>
-
-        <div>
+        {% for post in posts %}
+            <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+        <!-- <div>
             <p>published: 2025-12-28</p>
             <h2><a href="">My first post</a></h2>
             <p>Are you ready?</p>
-        </div>
+        </div> -->
 
 
     </body>
